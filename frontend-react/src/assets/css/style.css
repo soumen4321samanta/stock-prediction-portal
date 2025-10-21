@@ -1,16 +1,26 @@
-body{
-    background-color: #212529;
+body {
+  background-color: #212529;
+  margin: 0;
+  color: white;
 }
 
-.bg-light-dark{
-    background-color: #2B3035;
+.bg-light-dark {
+  background-color: #2B3035;
 }
 
-#root{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* 🔥 New layout rules */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-.container{
-    flex: 1;
+
+.main-content {
+  flex: 1;
 }
+
+/* Remove this — it breaks layout
+.container {
+  flex: 1;
+}
+*/
