@@ -2,7 +2,7 @@ from django.urls import path
 from accounts.views import RegisterView,ProtectedView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from accounts import views as UserViews
-
+from .views import StockPredictionAPIView
 
 urlpatterns = [
     path('register/',RegisterView.as_view()),
@@ -12,6 +12,10 @@ urlpatterns = [
     
     path('token/refresh/',TokenRefreshView.as_view(),name='token_refresh'), 
 
-    path('protected-view/',UserViews.ProtectedView.as_view())
+    path('protected-view/',UserViews.ProtectedView.as_view()),
+
+
+    #prediction api
+    path("predict/", StockPredictionAPIView.as_view(), name="stock_prediction")
 ]
  
